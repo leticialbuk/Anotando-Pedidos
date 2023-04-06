@@ -1,0 +1,15 @@
+C:\Dev\AnotandoPedidos\obj\Debug\net7.0\AnotandoPedidos.csproj.AssemblyReference.cache
+C:\Dev\AnotandoPedidos\obj\Debug\net7.0\AnotandoPedidos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dev\AnotandoPedidos\obj\Debug\net7.0\AnotandoPedidos.AssemblyInfoInputs.cache
+C:\Dev\AnotandoPedidos\obj\Debug\net7.0\AnotandoPedidos.AssemblyInfo.cs
+C:\Dev\AnotandoPedidos\obj\Debug\net7.0\AnotandoPedidos.csproj.CoreCompileInputs.cache
+C:\Dev\AnotandoPedidos\bin\Debug\net7.0\AnotandoPedidos.exe
+C:\Dev\AnotandoPedidos\bin\Debug\net7.0\AnotandoPedidos.deps.json
+C:\Dev\AnotandoPedidos\bin\Debug\net7.0\AnotandoPedidos.runtimeconfig.json
+C:\Dev\AnotandoPedidos\bin\Debug\net7.0\AnotandoPedidos.dll
+C:\Dev\AnotandoPedidos\bin\Debug\net7.0\AnotandoPedidos.pdb
+C:\Dev\AnotandoPedidos\obj\Debug\net7.0\AnotandoPedidos.dll
+C:\Dev\AnotandoPedidos\obj\Debug\net7.0\refint\AnotandoPedidos.dll
+C:\Dev\AnotandoPedidos\obj\Debug\net7.0\AnotandoPedidos.pdb
+C:\Dev\AnotandoPedidos\obj\Debug\net7.0\AnotandoPedidos.genruntimeconfig.cache
+C:\Dev\AnotandoPedidos\obj\Debug\net7.0\ref\AnotandoPedidos.dll
