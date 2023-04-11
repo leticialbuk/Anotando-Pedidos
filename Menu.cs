@@ -26,7 +26,7 @@ namespace Registro
             Console.Write("+");
             Console.Write("\n");
 
-            for (int lines = 0; lines <= 18; lines++)
+            for (int lines = 0; lines <= 25; lines++)
             {
                 Console.Write("|");
                 for (int i = 0; i <= 50; i++)
@@ -53,7 +53,7 @@ namespace Registro
             Console.SetCursorPosition(3, 4);
             Console.WriteLine("O que deseja pedir? Selecione uma opção abaixo.");
             Console.SetCursorPosition(3, 6);
-            Console.WriteLine("1 - Burgers");
+            Console.WriteLine("1 - Hamburguers");
             Console.SetCursorPosition(3, 7);
             Console.WriteLine("2 - Porções");
             Console.SetCursorPosition(3, 8);
@@ -67,11 +67,18 @@ namespace Registro
 
         public static void MenuOption(short option)
         {
+            var escolha = "";
             switch (option)
             {
-                case 1: MenuBurger(); break;
-                case 2: MenuPorcao(); break;
-                case 3: MenuBebidas(); break;
+                case 1:
+                    escolha = MenuBurger();
+                    break;
+                case 2:
+                    MenuPorcao();
+                    break;
+                case 3:
+                    MenuBebidas();
+                    break;
                 case 0:
                     {
                         Console.Clear();
@@ -80,52 +87,73 @@ namespace Registro
                     }
                 default: Show(); break;
             }
+
+            Console.SetCursorPosition(3, 21);
+            Console.WriteLine("Sua escolha foi: ");
+            Console.Write("\n");
+            Console.SetCursorPosition(3, 22);
+            Console.WriteLine(escolha);
         }
 
-        public static void MenuBurger()
+        public static string MenuBurger()
         {
-            string burger;
+            Console.SetCursorPosition(3, 14);
+            Console.WriteLine("Hamburguers");
+            Console.Write("\n");
+            Console.SetCursorPosition(3, 15);
+            Console.WriteLine("1 - TB Bacon");
+            Console.SetCursorPosition(3, 16);
+            Console.WriteLine("2 - TB Salada");
+            Console.SetCursorPosition(3, 17);
+            Console.WriteLine("3 - TB Tudo");
+            Console.SetCursorPosition(3, 19);
+            Console.Write("Opção: ");
+            var hamburguer = short.Parse(Console.ReadLine());
+
+            var escolha = "";
+            switch (hamburguer)
             {
-                Console.SetCursorPosition(3, 14);
-                Console.WriteLine("Hamburguers");
-                Console.Write("\n");
-                Console.SetCursorPosition(3, 15);
-                Console.WriteLine("1 - TB Bacon");
-                Console.SetCursorPosition(3, 16);
-                Console.WriteLine("2 - TB Salada");
-                Console.SetCursorPosition(3, 17);
-                Console.WriteLine("3 - TB Tudo");
+                case 1:
+                    escolha = "1 - TB Bacon";
+                    break;
+                case 2:
+                    escolha = "2 - TB Salada";
+                    break;
+                case 3:
+                    escolha = "3 - TB Tudo";
+                    break;
+                default:
+                    escolha = "Pedido inválido";
+                    break;
             }
+
+            return escolha;
         }
 
         public static void MenuPorcao()
         {
-            string porcao;
-            {
-                Console.SetCursorPosition(3, 14);
-                Console.WriteLine("Porções");
-                Console.Write("\n");
-                Console.SetCursorPosition(3, 15);
-                Console.WriteLine("1 - Batata");
-                Console.SetCursorPosition(3, 16);
-                Console.WriteLine("2 - Batata completa");
-            }
+            Console.SetCursorPosition(3, 14);
+            Console.WriteLine("Porções");
+            Console.Write("\n");
+            Console.SetCursorPosition(3, 15);
+            Console.WriteLine("1 - Batata");
+            Console.SetCursorPosition(3, 16);
+            Console.WriteLine("2 - Batata completa");
+            var porcao = short.Parse(Console.ReadLine());
         }
 
         public static void MenuBebidas()
         {
-            string bebidas;
-            {
-                Console.SetCursorPosition(3, 14);
-                Console.WriteLine("Bebidas");
-                Console.Write("\n");
-                Console.SetCursorPosition(3, 15);
-                Console.WriteLine("1 - Coca lata");
-                Console.SetCursorPosition(3, 16);
-                Console.WriteLine("2 - Guaraná lata");
-                Console.SetCursorPosition(3, 17);
-                Console.WriteLine("3 - Fanta lata");
-            }
+            Console.SetCursorPosition(3, 14);
+            Console.WriteLine("Bebidas");
+            Console.Write("\n");
+            Console.SetCursorPosition(3, 15);
+            Console.WriteLine("1 - Coca lata");
+            Console.SetCursorPosition(3, 16);
+            Console.WriteLine("2 - Guaraná lata");
+            Console.SetCursorPosition(3, 17);
+            Console.WriteLine("3 - Fanta lata");
+            var bebidas = short.Parse(Console.ReadLine());
         }
     }
 }
