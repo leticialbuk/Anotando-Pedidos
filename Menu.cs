@@ -74,10 +74,10 @@ namespace Registro
                     escolha = MenuBurger();
                     break;
                 case 2:
-                    MenuPorcao();
+                    escolha = MenuPorcao();
                     break;
                 case 3:
-                    MenuBebidas();
+                    escolha = MenuBebidas();
                     break;
                 case 0:
                     {
@@ -130,7 +130,7 @@ namespace Registro
             return escolha;
         }
 
-        public static void MenuPorcao()
+        public static string MenuPorcao()
         {
             Console.SetCursorPosition(3, 14);
             Console.WriteLine("Porções");
@@ -140,9 +140,26 @@ namespace Registro
             Console.SetCursorPosition(3, 16);
             Console.WriteLine("2 - Batata completa");
             var porcao = short.Parse(Console.ReadLine());
+
+            var escolha = "";
+            switch (porcao)
+            {
+                case 1:
+                    escolha = "1 - Batata";
+                    break;
+                case 2:
+                    escolha = "2 - Batata completa";
+                    break;
+
+                default:
+                    escolha = "Pedido inválido";
+                    break;
+            }
+
+            return escolha;
         }
 
-        public static void MenuBebidas()
+        public static string MenuBebidas()
         {
             Console.SetCursorPosition(3, 14);
             Console.WriteLine("Bebidas");
@@ -152,8 +169,27 @@ namespace Registro
             Console.SetCursorPosition(3, 16);
             Console.WriteLine("2 - Guaraná lata");
             Console.SetCursorPosition(3, 17);
-            Console.WriteLine("3 - Fanta lata");
+            Console.WriteLine("3 - Fanta laranja lata");
             var bebidas = short.Parse(Console.ReadLine());
+
+            var escolha = "";
+            switch (bebidas)
+            {
+                case 1:
+                    escolha = "1 - Coca lata";
+                    break;
+                case 2:
+                    escolha = "2 - Guaraná lata";
+                    break;
+                case 3:
+                    escolha = "3 - Fanta laranja lata";
+                    break;
+                default:
+                    escolha = "Pedido inválido";
+                    break;
+            }
+
+            return escolha;
         }
     }
 }
